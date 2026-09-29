@@ -56,7 +56,25 @@ export const projects: readonly Project[] = [
     accent: "cyan",
     repo: "raniyaiqbal/pocket-wellness",
   },
-  // Add the next project here — copy the object above and edit it.
+  {
+    id: "paveway",
+    title: "PaveWay",
+    tagline: "Autonomous pothole detection & mapping robot",
+    description:
+      "A TurtleBot3 robot running ROS 2 that maps its surroundings with LiDAR SLAM (Cartographer), navigates autonomously with Nav2, detects potholes with a YOLOv8 model on a Raspberry Pi camera, geotags each defect on the map and streams everything to a live React dashboard over rosbridge.",
+    year: "2024–2025",
+    badge: "Innovation Fair · 2nd Place",
+    tags: ["ROS 2", "TurtleBot3", "LiDAR SLAM", "Nav2", "YOLOv8", "OpenCV", "Gazebo", "React"],
+    metrics: [
+      { value: "88.4%", label: "detection mAP" },
+      { value: "<15 cm", label: "geotag error" },
+      { value: "6", label: "engineer team" },
+    ],
+    accent: "fuchsia",
+    repo: "raniyaiqbal/Paveway",
+    report: "/PaveWay-Final-Report.pdf",
+  },
+  // Add the next project here — copy an object above and edit it.
 ];
 
 export const experience: readonly Role[] = [

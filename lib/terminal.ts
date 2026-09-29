@@ -88,6 +88,19 @@ const registry: Record<string, Command> = {
     },
   },
 
+  report: {
+    summary: "read a project's full report",
+    usage: "report <project>",
+    complete: (partial) => projects.filter((p) => p.report).map((p) => p.id).filter((id) => id.startsWith(partial)),
+    run: ([id]) => {
+      const withReports = projects.filter((p) => p.report);
+      if (!id) return { lines: [error("usage: report <project>"), muted(`available: ${withReports.map((p) => p.id).join(", ")}`)] };
+      const project = withReports.find((p) => p.id === id.toLowerCase());
+      if (!project?.report) return { lines: [error(`report: no report for '${id}'`)] };
+      return { lines: out(`Opening ${project.title} report …`), effects: [{ type: "open", url: project.report }] };
+    },
+  },
+
   skills: {
     summary: "show skills, optionally by group",
     usage: "skills [group]",

@@ -23,6 +23,8 @@ export interface Project {
   accent: Accent;
   /** "owner/name" — used to fetch live stats from the GitHub REST API. */
   repo: `${string}/${string}`;
+  /** Optional path to a PDF in /public, shown as a "View full report" button. */
+  report?: `/${string}.pdf`;
 }
 
 export interface Role {

@@ -76,14 +76,26 @@ export default function ProjectCard({ project }: { project: Project }) {
 
       <div className="mt-auto flex flex-wrap items-center justify-between gap-4 pt-6 font-mono text-[11px]">
         <RepoStats repo={project.repo} />
-        <a
+        <div className="flex flex-wrap gap-2">
+          {project.report && (
+            <a
+              href={project.report}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded border border-white/15 px-4 py-2 font-bold uppercase tracking-widest text-zinc-300 transition-colors hover:border-white/30 hover:bg-white/5"
+            >
+              View full report <span aria-hidden>↗</span>
+            </a>
+          )}
+          <a
           href={repoUrl(project.repo)}
           target="_blank"
           rel="noopener noreferrer"
           className={`inline-flex items-center gap-2 rounded border px-4 py-2 font-bold uppercase tracking-widest transition-colors hover:bg-white/5 ${a.chip}`}
         >
           View repo <span aria-hidden>↗</span>
-        </a>
+          </a>
+        </div>
       </div>
     </article>
   );
