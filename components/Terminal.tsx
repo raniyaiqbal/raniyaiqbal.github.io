@@ -16,7 +16,7 @@ const kindClass: Record<LineKind, string> = {
 
 const BOOT: { kind: LineKind; text: string }[] = [
   { kind: "muted", text: "portfolio-shell v1.0 — interactive, try typing a command" },
-  { kind: "output", text: "Type `help` to get started, or `open pocket-wellness`." },
+  { kind: "output", text: "Type 'help' to get started" },
 ];
 
 export default function Terminal() {
