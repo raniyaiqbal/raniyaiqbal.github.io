@@ -16,7 +16,7 @@ export default function Hero() {
 
       <div className="relative mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1.15fr_1fr]">
         <div>
-          <p className="mb-6 inline-flex items-center gap-2 rounded-full border border-lime-400/30 bg-lime-400/5 px-3 py-1 font-mono text-[11px] uppercase tracking-[0.2em] text-lime-300">
+          <p className="mb-6 inline-flex items-center gap-2 rounded-full border border-lime-400/30 bg-lime-400/5 px-3 py-1 text-[11px] uppercase tracking-wide text-lime-300">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-lime-400 opacity-60" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-lime-400" />
@@ -32,9 +32,9 @@ export default function Hero() {
             .
           </h1>
 
-          <p className="mt-5 h-8 font-mono text-lg text-cyan-300 sm:text-xl" aria-label={profile.roles.join(", ")}>
+          <p className="mt-5 h-8 text-lg text-cyan-300 sm:text-xl" aria-label={profile.roles.join(", ")}>
             <span aria-hidden>
-              &gt; {role}
+              {role}
               <span className="ml-0.5 inline-block w-2 animate-pulse bg-cyan-300">&nbsp;</span>
             </span>
           </p>
@@ -43,7 +43,7 @@ export default function Hero() {
             {profile.summary}
           </p>
 
-          <div className="mt-10 flex flex-wrap gap-4 font-mono text-xs font-bold uppercase tracking-[0.2em]">
+          <div className="mt-10 flex flex-wrap gap-4 text-xs font-bold uppercase tracking-wide">
             <a href="#projects" className="border border-cyan-400/60 bg-cyan-400/10 px-6 py-3 text-cyan-200 transition hover:bg-cyan-400/20 hover:shadow-[0_0_24px_-4px_rgba(34,211,238,0.6)]">
               View projects →
             </a>

@@ -7,7 +7,7 @@ import { Reveal, Section, SectionHeading } from "./ui";
 export function About() {
   return (
     <Section id="about">
-      <SectionHeading label="ABOUT ME" color="text-cyan-300" />
+      <SectionHeading label="About me" color="text-cyan-300" />
       <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr]">
         <Reveal className="space-y-5 text-lg leading-relaxed text-zinc-400">
           {profile.about.map((p) => (
@@ -15,7 +15,7 @@ export function About() {
           ))}
         </Reveal>
         <Reveal delay={150}>
-          <div className="rounded-lg border border-cyan-400/20 bg-[#05060b] p-6 font-mono text-sm">
+          <div className="rounded-lg border border-cyan-400/20 bg-[#05060b] p-6 font-code text-sm">
             <p className="mb-4 text-xs text-zinc-600">{"// profile.json"}</p>
             <pre className="whitespace-pre-wrap leading-7 text-zinc-300">
               <span className="text-zinc-500">{"{"}</span>
@@ -45,7 +45,7 @@ export function About() {
 export function Experience() {
   return (
     <Section id="experience">
-      <SectionHeading label="EXPERIENCE" color="text-amber-300" hint="git log --oneline career" />
+      <SectionHeading label="Experience" color="text-amber-300" />
       <ol className="relative border-l border-white/10">
         {experience.map((r, i) => (
           <li key={r.org} className="mb-12 ml-6 last:mb-0">
@@ -55,11 +55,11 @@ export function Experience() {
                   r.end === "Present" ? "bg-lime-400 shadow-[0_0_12px_rgba(163,230,53,0.8)]" : "bg-zinc-600"
                 }`}
               />
-              <p className="font-mono text-xs uppercase tracking-[0.2em] text-zinc-500">
+              <p className="text-xs uppercase tracking-wide text-zinc-500">
                 {r.start} — {r.end} · {r.location}
               </p>
               <h3 className="mt-1 text-xl font-semibold text-zinc-100">{r.title}</h3>
-              <p className="font-mono text-sm text-amber-300/90">@ {r.org}</p>
+              <p className="text-sm text-amber-300/90">@ {r.org}</p>
               <ul className="mt-3 space-y-1.5 text-zinc-400">
                 {r.highlights.map((h) => (
                   <li key={h} className="flex gap-3">
@@ -82,9 +82,9 @@ export function Skills() {
 
   return (
     <Section id="skills">
-      <SectionHeading label="STACK TRACE" color="text-lime-300" />
+      <SectionHeading label="Stack trace" color="text-lime-300" />
 
-      <div role="tablist" aria-label="Filter skills" className="mb-8 flex flex-wrap gap-2 font-mono text-xs uppercase tracking-wider">
+      <div role="tablist" aria-label="Filter skills" className="mb-8 flex flex-wrap gap-2 text-xs uppercase tracking-wide">
         {[{ id: "all", label: "All" }, ...skills].map((g) => (
           <button
             key={g.id}
@@ -103,8 +103,8 @@ export function Skills() {
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {visible.map((g) => (
           <div key={g.id} className="rounded-lg border border-white/10 bg-white/[0.02] p-5">
-            <h3 className="mb-4 font-mono text-xs uppercase tracking-[0.2em] text-lime-300">{g.label}</h3>
-            <ul className="space-y-1.5 font-mono text-sm text-zinc-300">
+            <h3 className="mb-4 text-xs uppercase tracking-wide text-lime-300">{g.label}</h3>
+            <ul className="space-y-1.5 text-sm text-zinc-300">
               {g.items.map((s) => (
                 <li key={s}>
                   <span className="text-fuchsia-400">›</span> {s}
@@ -115,12 +115,12 @@ export function Skills() {
         ))}
       </div>
 
-      <h3 className="mb-4 mt-14 font-mono text-xs uppercase tracking-[0.25em] text-zinc-500">Certifications</h3>
+      <h3 className="mb-4 mt-14 text-xs uppercase tracking-wide text-zinc-500">Certifications</h3>
       <ul className="grid gap-3 sm:grid-cols-2">
         {certifications.map((c) => (
           <li key={c.name} className="flex items-center justify-between gap-4 rounded border border-white/10 px-4 py-3 text-sm">
             <span className="text-zinc-200">{c.name}</span>
-            <span className="shrink-0 font-mono text-xs text-zinc-500">{c.issuer}</span>
+            <span className="shrink-0 text-xs text-zinc-500">{c.issuer}</span>
           </li>
         ))}
       </ul>
@@ -140,11 +140,11 @@ export function Contact() {
         </p>
         <a
           href={`mailto:${profile.email}`}
-          className="mt-10 inline-block bg-fuchsia-600 px-8 py-4 font-mono text-sm font-bold uppercase tracking-[0.2em] text-white transition hover:bg-fuchsia-500 hover:shadow-[0_0_30px_-4px_rgba(232,121,249,0.8)]"
+          className="mt-10 inline-block bg-fuchsia-600 px-8 py-4 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-fuchsia-500 hover:shadow-[0_0_30px_-4px_rgba(232,121,249,0.8)]"
         >
           Get in touch
         </a>
-        <ul className="mt-10 flex justify-center gap-8 font-mono text-xs uppercase tracking-[0.2em]">
+        <ul className="mt-10 flex justify-center gap-8 text-xs uppercase tracking-wide">
           {profile.socials.map((s) => (
             <li key={s.label}>
               <a href={s.href} target={s.href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer" className="text-cyan-400/70 hover:text-cyan-300">
@@ -160,7 +160,7 @@ export function Contact() {
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/5 py-8 text-center font-mono text-xs text-zinc-600">
+    <footer className="border-t border-white/5 py-8 text-center text-xs text-zinc-600">
       © {new Date().getFullYear()} {profile.name} · built with Next.js, TypeScript &amp; Tailwind CSS
     </footer>
   );

@@ -40,13 +40,13 @@ export default function ProjectCard({ project }: { project: Project }) {
     >
       <div className="mb-3 flex items-start justify-between gap-4">
         <div>
-          <h3 className="font-mono text-lg font-bold uppercase tracking-wider text-zinc-50">
+          <h3 className="text-lg font-bold uppercase tracking-wide text-zinc-50">
             {project.title}
           </h3>
           <p className={`mt-1 text-sm ${a.text}`}>{project.tagline}</p>
         </div>
         {project.badge && (
-          <span className={`shrink-0 rounded border px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider ${a.chip}`}>
+          <span className={`shrink-0 rounded border px-2 py-0.5 text-[10px] uppercase tracking-wide ${a.chip}`}>
             {project.badge}
           </span>
         )}
@@ -59,8 +59,8 @@ export default function ProjectCard({ project }: { project: Project }) {
           {project.metrics.map((m) => (
             <div key={m.label}>
               <dt className="sr-only">{m.label}</dt>
-              <dd className={`font-mono text-2xl font-bold ${a.text}`}>{m.value}</dd>
-              <dd className="font-mono text-[10px] uppercase tracking-wider text-zinc-500">{m.label}</dd>
+              <dd className={`text-2xl font-bold ${a.text}`}>{m.value}</dd>
+              <dd className="text-[10px] uppercase tracking-wide text-zinc-500">{m.label}</dd>
             </div>
           ))}
         </dl>
@@ -68,13 +68,13 @@ export default function ProjectCard({ project }: { project: Project }) {
 
       <ul className="mt-5 flex flex-wrap gap-2">
         {project.tags.map((t) => (
-          <li key={t} className="rounded border border-white/10 bg-white/[0.03] px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-zinc-400">
+          <li key={t} className="rounded border border-white/10 bg-white/[0.03] px-2 py-0.5 text-[10px] uppercase tracking-wide text-zinc-400">
             {t}
           </li>
         ))}
       </ul>
 
-      <div className="mt-auto flex flex-wrap items-center justify-between gap-4 pt-6 font-mono text-[11px]">
+      <div className="mt-auto flex flex-wrap items-center justify-between gap-4 pt-6 text-[11px]">
         <RepoStats repo={project.repo} />
         <div className="flex flex-wrap gap-2">
           {project.report && (
@@ -82,7 +82,7 @@ export default function ProjectCard({ project }: { project: Project }) {
               href={project.report}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded border border-white/15 px-4 py-2 font-bold uppercase tracking-widest text-zinc-300 transition-colors hover:border-white/30 hover:bg-white/5"
+              className="inline-flex items-center gap-2 rounded border border-white/15 px-4 py-2 font-bold uppercase tracking-wide text-zinc-300 transition-colors hover:border-white/30 hover:bg-white/5"
             >
               View full report <span aria-hidden>↗</span>
             </a>
@@ -91,7 +91,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           href={repoUrl(project.repo)}
           target="_blank"
           rel="noopener noreferrer"
-          className={`inline-flex items-center gap-2 rounded border px-4 py-2 font-bold uppercase tracking-widest transition-colors hover:bg-white/5 ${a.chip}`}
+          className={`inline-flex items-center gap-2 rounded border px-4 py-2 font-bold uppercase tracking-wide transition-colors hover:bg-white/5 ${a.chip}`}
         >
           View repo <span aria-hidden>↗</span>
           </a>

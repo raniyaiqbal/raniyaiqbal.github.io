@@ -25,8 +25,8 @@ export default function Nav() {
       }`}
     >
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
-        <a href="#top" className="font-mono text-sm font-bold tracking-[0.3em] text-cyan-300 [text-shadow:0_0_12px_rgba(34,211,238,0.6)]">
-          {profile.name.toUpperCase()}
+        <a href="#top" className="font-display text-lg font-bold text-zinc-50">
+          {profile.name}
         </a>
 
         <ul className="hidden gap-8 md:flex">
@@ -34,7 +34,7 @@ export default function Nav() {
             <li key={id}>
               <a
                 href={`#${id}`}
-                className={`font-mono text-xs uppercase tracking-[0.2em] transition-colors ${
+                className={`text-sm font-medium capitalize transition-colors ${
                   active === id ? "text-fuchsia-400" : "text-cyan-400/60 hover:text-cyan-300"
                 }`}
               >
@@ -46,7 +46,7 @@ export default function Nav() {
 
         <button
           type="button"
-          className="font-mono text-xs uppercase tracking-widest text-cyan-300 md:hidden"
+          className="text-xs uppercase tracking-wide text-cyan-300 md:hidden"
           aria-expanded={open}
           aria-controls="mobile-menu"
           onClick={() => setOpen((o) => !o)}
@@ -62,9 +62,9 @@ export default function Nav() {
               <a
                 href={`#${id}`}
                 onClick={() => setOpen(false)}
-                className="block py-2 font-mono text-sm uppercase tracking-[0.2em] text-cyan-300/80"
+                className="block py-2 text-base font-medium capitalize text-zinc-300"
               >
-                &gt; {id}
+                {id}
               </a>
             </li>
           ))}

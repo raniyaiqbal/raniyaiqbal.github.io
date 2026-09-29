@@ -30,11 +30,8 @@ export function SectionHeading({
 }) {
   return (
     <div className="mb-10 flex items-end justify-between gap-4 border-b border-white/10 pb-4">
-      <h2 className={`font-mono text-xl font-bold tracking-[0.2em] sm:text-2xl ${color} [text-shadow:0_0_18px_currentColor]`}>
-        <span className="opacity-60">{"// "}</span>
-        {label}
-      </h2>
-      {hint && <p className="hidden font-mono text-xs text-cyan-400/70 sm:block">{hint}</p>}
+      <h2 className={`font-display text-3xl font-bold tracking-tight sm:text-4xl ${color}`}>{label}</h2>
+      {hint && <p className="hidden text-xs text-cyan-400/70 sm:block">{hint}</p>}
     </div>
   );
 }
