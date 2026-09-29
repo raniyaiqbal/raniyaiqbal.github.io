@@ -41,7 +41,7 @@ export default function ProjectCard({ project }: { project: Project }) {
       <div className="mb-3 flex items-start justify-between gap-4">
         <div>
           <h3 className="font-mono text-lg font-bold uppercase tracking-wider text-zinc-50">
-            {project.title.replace(/\s+/g, "_")}
+            {project.title}
           </h3>
           <p className={`mt-1 text-sm ${a.text}`}>{project.tagline}</p>
         </div>
