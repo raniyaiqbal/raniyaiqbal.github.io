@@ -26,7 +26,7 @@ export default function Nav() {
     >
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
         <a href="#top" className="font-mono text-sm font-bold tracking-[0.3em] text-cyan-300 [text-shadow:0_0_12px_rgba(34,211,238,0.6)]">
-          {profile.name.toUpperCase().replace(" ", "_")}
+          {profile.name.toUpperCase()}
         </a>
 
         <ul className="hidden gap-8 md:flex">
