@@ -7,7 +7,7 @@ import { Reveal, Section, SectionHeading } from "./ui";
 export function About() {
   return (
     <Section id="about">
-      <SectionHeading label="ABOUT_ME" color="text-cyan-300" />
+      <SectionHeading label="ABOUT ME" color="text-cyan-300" />
       <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr]">
         <Reveal className="space-y-5 text-lg leading-relaxed text-zinc-400">
           {profile.about.map((p) => (
@@ -82,7 +82,7 @@ export function Skills() {
 
   return (
     <Section id="skills">
-      <SectionHeading label="STACK_TRACE" color="text-lime-300" />
+      <SectionHeading label="STACK TRACE" color="text-lime-300" />
 
       <div role="tablist" aria-label="Filter skills" className="mb-8 flex flex-wrap gap-2 font-mono text-xs uppercase tracking-wider">
         {[{ id: "all", label: "All" }, ...skills].map((g) => (
