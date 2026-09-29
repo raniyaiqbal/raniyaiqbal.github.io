@@ -63,7 +63,7 @@ export const experience: readonly Role[] = [
   {
     title: "Application Engineer Intern",
     org: "Emerson FZE",
-    location: "Jebel Ali, Dubai",
+    location: "Jebel Ali, Dubai, United Arab Emirates",
     start: "Aug 2026",
     end: "Present",
     highlights: [
@@ -75,7 +75,7 @@ export const experience: readonly Role[] = [
   {
     title: "Electrical Engineer Intern",
     org: "Al Fisht Electromechanical Works",
-    location: "Ajman",
+    location: "Al Rashidiya 3, Ajman, United Arab Emirates",
     start: "Apr 2026",
     end: "Jul 2026",
     highlights: [
@@ -86,7 +86,7 @@ export const experience: readonly Role[] = [
   {
     title: "Robotics Intern",
     org: "Unique World Robotics",
-    location: "Dubai",
+    location: "Al Karama, Dubai, United Arab Emirates",
     start: "Sep 2025",
     end: "Jan 2026",
     highlights: [
