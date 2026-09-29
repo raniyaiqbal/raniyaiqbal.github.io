@@ -62,13 +62,6 @@ export default function Projects() {
             <ProjectCard project={p} />
           </Reveal>
         ))}
-        <Reveal delay={projects.length * 100}>
-          <div className="flex h-full min-h-64 flex-col items-center justify-center rounded-lg border border-dashed border-white/10 p-6 text-center">
-            <span className="text-3xl text-fuchsia-400/60">+</span>
-            <p className="mt-3 text-sm uppercase tracking-wide text-zinc-400">Next build in progress</p>
-            <p className="mt-2 text-xs text-zinc-600">New robotics &amp; AI projects land here as they ship.</p>
-          </div>
-        </Reveal>
       </div>
     </Section>
   );
