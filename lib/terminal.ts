@@ -160,9 +160,9 @@ const registry: Record<string, Command> = {
     summary: "try it",
     usage: "sudo <cmd>",
     run: (args) =>
-      args.join(" ") === "hire raniya"
+      args.join(" ") === "hire Raniya"
         ? { lines: [accent("✔ Permission granted."), ...out(`Drafting email to ${profile.email} …`)], effects: [{ type: "open", url: `mailto:${profile.email}?subject=Let's%20work%20together` }] }
-        : { lines: [error("Nice try. Hint: `sudo hire raniya`")] },
+        : { lines: [error("Nice try. Hint: 'sudo hire raniya'. You wouldn't regret it ;)")] },
   },
 };
 
