@@ -24,11 +24,11 @@ export const profile: Profile = {
     "Automation Engineer",
   ],
   summary:
-    "I build systems that sense, decide and act — from embedded firmware and machine-learning pipelines to the software that ties them together.",
+    "I’m a Mechatronics Engineer with an interest in automation, robotics, and intelligent systems. I enjoy working across hardware and software to develop practical solutions to engineering problems.",
   about: [
-    "I'm a Mechatronics Engineer who writes software for machines. My work spans embedded systems, sensor fusion, computer vision, machine learning and industrial automation, and I enjoy owning a project end to end: CAD, firmware, models, dashboards and the final working prototype.",
-    "I'm currently an Application Engineer Intern at Emerson, where I work with Fisher control valves and build Power Platform tools that digitalise workflows across departments.",
-    "I'm looking for opportunities in automation, AI and robotics.",
+    "I'm a Mechatronics Engineer with a background in mechanical, electrical, and software systems. My interests include robotics, embedded systems, and industrial automation, particularly where hardware and software come together to solve practical engineering problems.",
+    "I currently work as an Application Engineer Intern at Emerson, supporting Fisher control valve applications and developing digital tools to improve engineering workflows. My previous experience includes robotics, embedded programming, and electrical engineering.",
+    "I'm interested in roles where I can continue developing my technical skills and contribute to projects in automation, robotics, and intelligent systems.",
   ],
   education: "B.Eng (Hons) Mechatronics Engineering — University of Wollongong in Dubai",
   languages: ["English", "Malayalam", "Hindi", "French (basic)", "Arabic (basic)"],
