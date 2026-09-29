@@ -70,7 +70,6 @@ export default function Projects() {
           </div>
         </Reveal>
       </div>
-      <LiveRepos />
     </Section>
   );
 }
