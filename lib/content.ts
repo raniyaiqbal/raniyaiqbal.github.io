@@ -45,16 +45,18 @@ export const projects: readonly Project[] = [
     title: "Pocket Wellness",
     tagline: "AI wearable for real-time mental health monitoring",
     description:
-      "A sensor glove that streams GSR, HRV, EMG and ECG signals from an ESP32, classifies anxiety, depression, insomnia and panic states with an explainable Random Forest model, and responds with chatbot and haptic interventions.",
+      "A wearable system that fuses HRV, GSR and EMG signals through an Arduino Nano ESP32 into an 18-feature vector, classifies four stress tiers with an explainable Random Forest (SHAP), and responds through a four-tier intervention framework: guided breathing, a physiologically aware chatbot and dual-pathway crisis escalation, all on a live Flask dashboard.",
     year: "2025–2026",
     badge: "Thesis · Distinction",
-    tags: ["ESP32", "Python", "Random Forest", "SHAP", "Full-Stack", "Biosignals"],
+    tags: ["ESP32", "Arduino", "Python", "Flask", "Random Forest", "SHAP", "Biosignals"],
     metrics: [
-      { value: "97.4%", label: "accuracy" },
-      { value: "4", label: "sensor modalities" },
+      { value: "97.4%", label: "test accuracy" },
+      { value: "18", label: "features" },
+      { value: "3", label: "sensor modalities" },
     ],
     accent: "cyan",
     repo: "raniyaiqbal/pocket-wellness",
+    report: "/Pocket-Wellness-Thesis.pdf",
   },
   {
     id: "paveway",
